@@ -24,7 +24,7 @@ public class HorizontalPickerActivity extends AppCompatActivity {
 
         HorizontalAdapter adapter = new HorizontalAdapter(DummyElements.getElements());
 
-        my_recycler_view.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        my_recycler_view.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         my_recycler_view.setAdapter(adapter);
 

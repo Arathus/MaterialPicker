@@ -38,6 +38,7 @@ public class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.Ho
         Element elem = elemlist.get(position);
         holder.viewItem.setText(elem.getText());
 
+
     }
 
     @Override

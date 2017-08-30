@@ -19,6 +19,9 @@ public class DummyElements {
         elements.add(new Element("Fourth", "#FFFFFF", null));
         elements.add(new Element("Fifth", "#FFFFFF", null));
         elements.add(new Element("Sixth", "#FFFFFF", null));
+        elements.add(new Element("Seventh", "#FFFFFF", null));
+        elements.add(new Element("Eight", "#FFFFFF", null));
+        elements.add(new Element("Ninth", "#FFFFFF", null));
 
 
         return elements;
