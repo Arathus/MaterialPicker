@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MaterialPicker</string>
+    <string name="title_activity_horizontal_picker">HorizontalPickerActivity</string>
+</resources>
