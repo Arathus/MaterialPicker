@@ -72,16 +72,7 @@ public class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.Ho
             super(itemView);
 
            this.viewItem = itemView.findViewById(R.id.textitem);
-//
-//            viewItem.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//
-//
-//                    Toast.makeText(v.getContext(), viewItem.getText(), Toast.LENGTH_SHORT).show();
-//
-//                }
-//            });
+
 
         }
     }
