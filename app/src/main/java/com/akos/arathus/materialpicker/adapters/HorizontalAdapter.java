@@ -30,7 +30,25 @@ public class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.Ho
     public HorizontalAdapter.HorizontalHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.element_item, null);
 
-        return new HorizontalHolder(v);
+        final HorizontalHolder horhold = new HorizontalHolder(v);
+
+        horhold.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int adapterpos = horhold.getAdapterPosition();
+                if (adapterpos != RecyclerView.NO_POSITION) {
+
+                    Toast.makeText(view.getContext(), Integer.toString(adapterpos), Toast.LENGTH_LONG).show();
+
+                    elemlist.remove(adapterpos);
+                    notifyItemRemoved(adapterpos);
+                    notifyItemRangeChanged(adapterpos,elemlist.size());
+                }
+
+            }
+        });
+
+        return horhold;
     }
 
     @Override
@@ -53,17 +71,17 @@ public class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.Ho
         HorizontalHolder(View itemView) {
             super(itemView);
 
-            this.viewItem = itemView.findViewById(R.id.textitem);
-
-            viewItem.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-
-                    Toast.makeText(v.getContext(), viewItem.getText(), Toast.LENGTH_SHORT).show();
-
-                }
-            });
+           this.viewItem = itemView.findViewById(R.id.textitem);
+//
+//            viewItem.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//
+//
+//                    Toast.makeText(v.getContext(), viewItem.getText(), Toast.LENGTH_SHORT).show();
+//
+//                }
+//            });
 
         }
     }
