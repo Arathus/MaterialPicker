@@ -21,21 +21,49 @@
     </android.support.design.widget.AppBarLayout>
 
 
-    <LinearLayout
-        android:id="@+id/container"
-        android:paddingTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-
-        <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/horizontal_recyclerview"
+        <LinearLayout
+            android:id="@+id/container1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="none" />
+            android:paddingTop="150dp">
 
-    </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/recyclerview_picker_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+        <com.google.android.flexbox.FlexboxLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/selected_ones_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:alignContent="flex_start"
+            app:alignItems="flex_start"
+            app:flexWrap="wrap"
+            app:showDivider="beginning|middle">
+
+            <!--<android.support.v7.widget.AppCompatTextView
+                android:id="@+id/selectelements_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Select your favourite elements"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />-->
+
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+
+    </RelativeLayout>
 
 
 </android.support.design.widget.CoordinatorLayout>

@@ -7,23 +7,29 @@
     tools:context="com.akos.arathus.materialpicker.MainActivity">
 
 
-
-<android.support.v7.widget.AppCompatButton
-    android:id="@+id/horizontalpicker"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:gravity="center"
-    android:layout_width="match_parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    android:text="Horizontal picker">
-
-</android.support.v7.widget.AppCompatButton>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/horizontalpicker"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Horizontal picker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
+    </android.support.v7.widget.AppCompatButton>
 
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/globepicker"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:text="Globe picker"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalpicker"
+        tools:layout_editor_absoluteX="8dp" />
 
 
 </android.support.constraint.ConstraintLayout>
