@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.akos.arathus.materialpicker.HorizontalPickerActivity;
 import com.akos.arathus.materialpicker.R;
 import com.akos.arathus.materialpicker.picker_elements.Element;
 
@@ -42,7 +41,6 @@ public class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.Ho
                     Toast.makeText(view.getContext(), Integer.toString(adapterpos), Toast.LENGTH_LONG).show();
 
 
-                    HorizontalPickerActivity.addselected(elemlist.get(adapterpos), (HorizontalPickerActivity) view.getContext());
 
                     elemlist.remove(adapterpos);
                     notifyItemRemoved(adapterpos);
